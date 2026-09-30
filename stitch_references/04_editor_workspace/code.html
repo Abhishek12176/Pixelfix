@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#00d298","surface-container-lowest":"#0e0e0f","on-primary-container":"#2b0088","error-container":"#93000a","on-tertiary-fixed":"#3e0022","surface-tint":"#cabeff","primary-fixed-dim":"#cabeff","inverse-surface":"#e5e2e3","on-surface-variant":"#c9c4d8","primary":"#cabeff","on-primary-fixed":"#1c0062","on-background":"#e5e2e3","surface-bright":"#3a393a","surface-container-low":"#1c1b1c","inverse-on-surface":"#313031","on-tertiary":"#640039","secondary-fixed":"#56fdc0","on-secondary-fixed":"#002115","tertiary-container":"#f751a1","on-tertiary-fixed-variant":"#8c0053","on-secondary":"#003826","surface":"#131314","on-surface":"#e5e2e3","outline-variant":"#484555","on-secondary-container":"#00543b","on-error-container":"#ffdad6","outline":"#938ea1","inverse-primary":"#613de0","surface-dim":"#131314","primary-fixed":"#e6deff","surface-container-high":"#2a2a2b","tertiary-fixed":"#ffd9e4","on-error":"#690005","surface-variant":"#353436","tertiary":"#ffb0cd","on-primary":"#32009a","secondary-fixed-dim":"#2ae0a5","secondary":"#42efb2","on-primary-fixed-variant":"#4918c8","background":"#131314","primary-container":"#947dff","surface-container":"#201f20","error":"#ffb4ab","on-secondary-fixed-variant":"#005139","surface-container-highest":"#353436","on-tertiary-container":"#570032","tertiary-fixed-dim":"#ffb0cd"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1rem","space-md":"0.75rem","space-xl":"1.5rem",margin:"1rem","gutter-sm":"0.5rem","margin-lg":"1.5rem",gutter:"1rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["JetBrains Mono"],"label-md":["JetBrains Mono"],"display-lg-mobile":["Geist"],"headline-lg":["Geist"],"body-md":["Geist"],"headline-md":["Geist"],code:["JetBrains Mono"],"display-lg":["Geist"],"body-sm":["Geist"],"headline-lg-mobile":["Geist"],"body-lg":["Geist"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"500"}],code:["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"display-lg":["44px",{lineHeight:"52px",letterSpacing:"-0.035em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-12 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="PixelFix Wordmark Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WBZ7SmwW_uKkaUA-ervNJ0tNtABBrejE34M2C4OnihrLmtgYCiQkY2i4dnzQPdUS1S1cz6Ba7WUzlHobn5y8R0aYY2_OmURDrwa6mk9uyejZEUQddbxoyiUoWoHSh5Wpe8G_FyQcodkOCldvLYojrogSM_QrkJcm4bxH1JWfm65R5a-8BBOszwAC49XMc4A9HSiNUp5nXQjc5BCphHz4nt1nJ2BQmSrivg5_X8pB7BS0L01Ad1Ap9gy78u"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">PixelFix</span><div class="hidden sm:flex items-center gap-space-xs px-space-xs py-[2px] rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>v2.4 · Powered by IOPaint</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface rounded"><a aria-current="page" class="px-space-md py-space-xs font-label-md transition-colors bg-surface-container-high text-on-surface rounded" data-path="studio" href="#">Studio</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="batch" href="#">Batch</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="api" href="#">API</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center px-space-xs py-[2px] rounded bg-surface-container font-code text-code text-on-surface-variant">⌘K</div><button aria-label="Toggle Theme" class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">dark_mode</span></button><a class="hidden sm:inline-flex items-center px-space-sm py-space-xs rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:bg-surface-container transition-colors" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">Made by Abhishek ↗</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-12 flex-1 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<div class="flex flex-col lg:flex-row w-full h-[calc(100vh-3rem)] overflow-hidden bg-surface-container-lowest text-on-surface">
+<!-- LEFT / CENTER CANVAS STAGE (Flex-1) -->
+<section class="flex flex-col flex-1 h-full min-w-0 relative select-none">
+<!-- Top Canvas Precision Micro-Toolbar -->
+<div class="h-11 px-gutter flex items-center justify-between bg-surface-container-low shrink-0 z-30">
+<!-- Left Breadcrumb & File Meta -->
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors px-space-xs py-1 rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span class="hidden sm:inline">Back</span>
+</button>
+<div class="h-3 w-[1px] bg-surface-variant hidden sm:block"></div>
+<div class="flex items-center gap-space-xs px-space-xs py-[2px] rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm truncate">
+<span class="material-symbols-outlined text-[14px] text-primary">image</span>
+<span class="font-code text-on-surface truncate">DSC_0894_street.jpg</span>
+<span class="text-outline text-[9px]">2.4 MB</span>
+</div>
+<div class="hidden md:flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant px-space-xs py-0.5 rounded bg-surface-container-high">
+<span>100%</span>
+</div>
+</div>
+<!-- Center History & Viewport Controls -->
+<div class="flex items-center gap-1 bg-surface-container p-[2px] rounded-lg">
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors" id="btn-undo" title="Undo (⌘Z)" type="button">
+<span class="material-symbols-outlined text-[16px]">undo</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" id="btn-redo" title="Redo (⇧⌘Z)" type="button">
+<span class="material-symbols-outlined text-[16px]">redo</span>
+</button>
+<div class="h-3 w-[1px] bg-surface-container-highest my-auto"></div>
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" id="btn-reset-mask" title="Reset Mask" type="button">
+<span class="material-symbols-outlined text-[16px]">ink_eraser</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="btn-fit" title="Fit to Screen (F)" type="button">
+<span class="material-symbols-outlined text-[16px]">crop_free</span>
+</button>
+</div>
+<!-- Right Compare Switcher -->
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all group active:scale-95" id="btn-compare" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary group-hover:text-primary transition-colors">visibility</span>
+<span class="hidden sm:inline">Compare</span>
+<span class="font-code text-[9px] px-1 py-[1px] rounded bg-surface-container-lowest text-outline">Space</span>
+</button>
+</div>
+</div>
+<!-- Infinite Canvas Viewport Area -->
+<div class="relative flex-1 w-full h-full overflow-hidden flex items-center justify-center cursor-crosshair bg-surface-container-lowest" id="canvas-stage" style="background-image: radial-gradient(rgba(202, 190, 255, 0.08) 1px, transparent 1px); background-size: 24px 24px;">
+<!-- Live Status Pill Overlay (GPU compute monitor) -->
+<div class="absolute top-4 right-4 z-20 flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container-low/90 backdrop-blur-md shadow-lg pointer-events-none">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-code text-label-sm text-on-surface">IOPaint Engine</span>
+<span class="font-code text-label-sm text-outline">·</span>
+<span class="font-code text-label-sm text-secondary">A100-SXM4 (0.8s)</span>
+</div>
+<!-- Image Container with active inpainting mask -->
+<div class="relative max-w-[92%] max-h-[82%] shadow-2xl rounded-lg overflow-hidden group select-none transition-transform duration-150 ease-out" id="viewport-artwork">
+<!-- Source Canvas Asset -->
+<img class="w-auto h-auto max-h-[72vh] object-contain block pointer-events-none" data-alt="A vivid, cinematic daytime photograph of a joyful brunette woman in a denim jacket and floral dress holding a coffee cup on a sunny European cobblestone street outside Cafe Luna. In the background, patrons sit at outdoor cafe tables under striped awnings with charming stone facades and hanging flower baskets." id="base-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATspMXa_6u26zEKQnB_v2zufvsuPXuSlddwhIXURu2oxbPLJLyF5FYI9RL9xJwb7vnCmWTQGxk4--bzByoLGfU7Sh6TRLusUTKfoiYxLydlrZf_byT0vWac1c84G4iON60WofiDJJJjM7mlg-YIlDfEZSZMgmczQrMB1FUhw9MqI8MA1IzktR5PuK5nMjqNa-lH8tS4Gw2aoih__ytlja8jXRYhLGtnv1gHRzPIm6jyuxKebJuej2-Hw"/>
+<!-- Realistic Inpainting Mask SVG Overlay: Soft semi-transparent electric violet overlay feathered on the photobomber/seated background patron -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" preserveaspectratio="none" viewbox="0 0 1600 900">
+<defs>
+<filter height="140%" id="violet-feather" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="7"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<lineargradient id="mask-lum" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#cabeff" stop-opacity="0.55"></stop>
+<stop offset="100%" stop-color="#947dff" stop-opacity="0.4"></stop>
+</lineargradient>
+</defs>
+<!-- Active mask brushed accurately over the foreground stranger seated drinking wine at Cafe Luna -->
+<g filter="url(#violet-feather)" id="mask-region">
+<!-- Brushed mask body representing organic hand-painted stroke cluster -->
+<path d="M 1190,460 
+                       C 1230,440 1280,440 1320,465 
+                       C 1365,490 1400,535 1410,580 
+                       C 1420,630 1435,700 1430,760 
+                       C 1425,820 1400,900 1370,900 
+                       C 1330,900 1270,900 1230,890 
+                       C 1200,840 1195,780 1200,720 
+                       C 1195,680 1180,630 1185,580 
+                       C 1185,530 1175,480 1190,460 Z" fill="url(#mask-lum)"></path>
+<!-- Arm & table region selection -->
+<path d="M 1250,560 
+                       C 1270,550 1330,555 1345,595 
+                       C 1355,625 1360,670 1350,710 
+                       C 1335,745 1290,750 1260,730 
+                       C 1240,715 1245,630 1250,560 Z" fill="#cabeff" fill-opacity="0.35"></path>
+</g>
+<!-- Dynamic contour highlight of the brush selection -->
+<path class="animate-pulse" d="M 1190,460 
+                     C 1230,440 1280,440 1320,465 
+                     C 1365,490 1400,535 1410,580 
+                     C 1420,630 1435,700 1430,760 
+                     C 1425,820 1400,900 1370,900 
+                     C 1330,900 1270,900 1230,890 
+                     C 1200,840 1195,780 1200,720 
+                     C 1195,680 1180,630 1185,580 
+                     C 1185,530 1175,480 1190,460 Z" fill="none" stroke="#cabeff" stroke-dasharray="4 3" stroke-width="1.5"></path>
+</svg>
+<!-- Interactive Brush Cursor Tracker positioned near the masked area -->
+<div class="absolute left-[78%] top-[62%] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-20 flex flex-col items-center" id="virtual-cursor">
+<div class="w-12 h-12 rounded-full border border-dashed border-primary bg-primary/10 flex items-center justify-center transition-all duration-75" id="cursor-ring">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+<div class="mt-2 px-space-xs py-[2px] rounded-full bg-surface-container-high/95 text-on-surface font-code text-label-sm shadow-md whitespace-nowrap backdrop-blur-md">
+<span id="cursor-label">48px · Soft Edge</span>
+</div>
+</div>
+</div>
+<!-- Floating Mini Canvas Dock (Anchored Bottom Center) -->
+<div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-space-sm py-1.5 rounded-xl bg-surface-container/90 backdrop-blur-md shadow-2xl">
+<!-- Tool quick-cluster -->
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary-container text-on-primary-container shadow-sm" id="tool-brush-dock" title="Brush Tool (B)" type="button">
+<span class="material-symbols-outlined text-[18px]">brush</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="tool-eraser-dock" title="Eraser Tool (E)" type="button">
+<span class="material-symbols-outlined text-[18px]">ink_eraser</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="tool-hand-dock" title="Pan Tool (H)" type="button">
+<span class="material-symbols-outlined text-[18px]">pan_tool</span>
+</button>
+<div class="h-4 w-[1px] bg-surface-variant mx-1"></div>
+<!-- Zoom Step Controls -->
+<div class="flex items-center gap-1 px-1">
+<button class="w-6 h-6 flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="zoom-out" type="button">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-code text-label-sm text-on-surface px-1 min-w-[38px] text-center" id="zoom-val">100%</span>
+<button class="w-6 h-6 flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="zoom-in" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+<div class="h-4 w-[1px] bg-surface-variant mx-1"></div>
+<!-- Recenter trigger -->
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="canvas-center" title="Center View" type="button">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+</button>
+</div>
+</div>
+</section>
+<!-- RIGHT INSPECTOR & PARAMETERS RAIL (Fixed 340px) -->
+<aside class="w-full lg:w-[340px] xl:w-[360px] bg-surface-container-low shrink-0 flex flex-col justify-between overflow-y-auto z-20">
+<div class="p-gutter flex flex-col gap-space-lg">
+<!-- SECTION 1: Tool Selection & Mode -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Masking Tool</span>
+<span class="font-code text-[11px] text-secondary">Ready to Inpaint</span>
+</div>
+<div class="grid grid-cols-3 gap-1 p-1 bg-surface-container rounded-lg">
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded bg-surface-container-high text-primary shadow-sm transition-all" id="btn-mode-brush" type="button">
+<span class="material-symbols-outlined text-[18px]">brush</span>
+<span class="font-label-sm text-[11px] mt-0.5">Brush</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-all" id="btn-mode-lasso" type="button">
+<span class="material-symbols-outlined text-[18px]">gesture</span>
+<span class="font-label-sm text-[11px] mt-0.5">Lasso</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-all" id="btn-mode-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span class="font-label-sm text-[11px] mt-0.5">Auto-Detect</span>
+</button>
+</div>
+</div>
+<!-- SECTION 2: Precision Brush Settings -->
+<div class="flex flex-col gap-space-md p-space-md rounded-xl bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-[14px] text-on-surface">Brush Parameters</span>
+<!-- Live size preview dot -->
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<div class="rounded-full bg-primary transition-all duration-75" id="brush-dot-preview" style="width: 14px; height: 14px;"></div>
+</div>
+</div>
+<!-- Brush Size Control -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<label class="text-on-surface-variant" for="brush-size-input">Size</label>
+<div class="flex items-center gap-1">
+<input class="w-12 text-right bg-surface-container-lowest text-on-surface font-code text-label-sm px-1.5 py-0.5 rounded outline-none" id="brush-size-val" max="150" min="4" type="number" value="48"/>
+<span class="text-outline">px</span>
+</div>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="brush-size-range" max="150" min="4" type="range" value="48"/>
+</div>
+<!-- Hardness / Feather Slider -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<label class="text-on-surface-variant" for="feather-val">Edge Feathering</label>
+<span class="font-code text-on-surface" id="feather-label">40%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="feather-range" max="100" min="0" type="range" value="40"/>
+</div>
+<!-- Precision Engine Toggle -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Inpainting Engine</span>
+<div class="grid grid-cols-2 gap-1 p-1 bg-surface-container-lowest rounded-lg">
+<button class="py-1 px-2 rounded bg-surface-container text-primary font-label-sm text-label-sm shadow-sm text-center" type="button">Quality (SDXL)</button>
+<button class="py-1 px-2 rounded text-outline hover:text-on-surface font-label-sm text-label-sm text-center" type="button">Fast (LaMa)</button>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Action Buttons -->
+<div class="flex flex-col gap-space-sm">
+<!-- Primary Action Trigger -->
+<button class="w-full py-3 px-space-md rounded-xl bg-primary text-on-primary font-headline-md text-[14px] font-semibold flex items-center justify-between shadow-lg shadow-primary/25 hover:bg-primary-fixed hover:text-on-primary-fixed active:scale-[0.98] transition-all" id="btn-execute-inpaint" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">auto_draw_solid</span>
+<span>Remove 1 Object</span>
+</div>
+<div class="px-1.5 py-0.5 rounded bg-on-primary/15 text-on-primary font-code text-label-sm">
+              Enter ↵
+            </div>
+</button>
+<!-- Secondary Mask Actions -->
+<div class="flex gap-2">
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5" id="btn-clear-selection" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Clear Mask</span>
+</button>
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1" id="btn-invert-selection" title="Invert Mask Area" type="button">
+<span class="material-symbols-outlined text-[16px]">invert_colors</span>
+</button>
+</div>
+</div>
+<!-- SECTION 4: Active Mask Regions / Layers -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Active Selections</span>
+<span class="font-code text-label-sm text-primary">1 Region</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-surface-container-lowest overflow-hidden flex items-center justify-center shrink-0 relative">
+<span class="w-4 h-4 rounded-full bg-primary/60 blur-[1px]"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface truncate font-medium">Patron Foreground</span>
+<span class="font-code text-[11px] text-outline">340 px² · 84% confidence</span>
+</div>
+</div>
+<button class="w-7 h-7 flex items-center justify-center rounded text-outline hover:text-error hover:bg-surface-container-lowest transition-colors" title="Remove Layer" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 5: High-End Developer Attribution & Shortcut Card -->
+<div class="p-gutter mt-auto flex flex-col gap-space-sm bg-surface-container-low shrink-0">
+<!-- Developer Monogram Badge Card -->
+<div class="p-space-md rounded-xl bg-surface-container shadow-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container font-code font-bold text-label-md flex items-center justify-center shrink-0 shadow-inner">
+              AP
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Crafted by Abhishek</span>
+<span class="font-label-sm text-[10px] text-outline truncate">Full Stack & AI UX</span>
+</div>
+</div>
+<a class="px-space-xs py-1 rounded text-primary hover:bg-primary/10 font-label-sm text-label-sm whitespace-nowrap transition-colors flex items-center gap-0.5" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">
+            Portfolio
+            <span class="material-symbols-outlined text-[13px]">north_east</span>
+</a>
+</div>
+<!-- Hotkey cheat-sheet metadata -->
+<div class="flex items-center justify-between text-[11px] font-code text-outline px-1">
+<span>⌘Z to Undo</span>
+<span>[ / ] Resize Brush</span>
+<span>Space to Pan</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function() {
+    // Brush Size synchronization
+    const sizeRange = document.getElementById('brush-size-range');
+    const sizeVal = document.getElementById('brush-size-val');
+    const cursorRing = document.getElementById('cursor-ring');
+    const cursorLabel = document.getElementById('cursor-label');
+    const dotPreview = document.getElementById('brush-dot-preview');
+
+    function updateBrushSize(val) {
+      const clamped = Math.max(4, Math.min(150, val));
+      sizeRange.value = clamped;
+      sizeVal.value = clamped;
+      if (cursorRing) {
+        cursorRing.style.width = clamped + 'px';
+        cursorRing.style.height = clamped + 'px';
+      }
+      if (dotPreview) {
+        const dotSize = Math.max(4, Math.min(24, clamped / 4));
+        dotPreview.style.width = dotSize + 'px';
+        dotPreview.style.height = dotSize + 'px';
+      }
+      if (cursorLabel) {
+        cursorLabel.textContent = clamped + 'px · Soft Edge';
+      }
+    }
+
+    if (sizeRange && sizeVal) {
+      sizeRange.addEventListener('input', (e) => updateBrushSize(e.target.value));
+      sizeVal.addEventListener('change', (e) => updateBrushSize(e.target.value));
+    }
+
+    // Feathering readout
+    const featherRange = document.getElementById('feather-range');
+    const featherLabel = document.getElementById('feather-label');
+    if (featherRange && featherLabel) {
+      featherRange.addEventListener('input', (e) => {
+        featherLabel.textContent = e.target.value + '%';
+      });
+    }
+
+    // Keyboard bracket brush sizing shortcuts
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT') return;
+      if (e.key === '[') {
+        updateBrushSize(parseInt(sizeRange.value, 10) - 8);
+      } else if (e.key === ']') {
+        updateBrushSize(parseInt(sizeRange.value, 10) + 8);
+      }
+    });
+
+    // Compare with original state toggle
+    const compareBtn = document.getElementById('btn-compare');
+    const maskRegion = document.getElementById('mask-region');
+    let isMaskVisible = true;
+
+    function toggleMaskVisibility(visible) {
+      if (!maskRegion) return;
+      maskRegion.style.display = visible ? 'block' : 'none';
+      if (compareBtn) {
+        compareBtn.classList.toggle('text-primary', !visible);
+      }
+    }
+
+    if (compareBtn) {
+      compareBtn.addEventListener('mousedown', () => toggleMaskVisibility(false));
+      compareBtn.addEventListener('mouseup', () => toggleMaskVisibility(true));
+      compareBtn.addEventListener('mouseleave', () => toggleMaskVisibility(true));
+    }
+
+    // Space key hold for compare
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' && e.target.tagName !== 'INPUT' && !e.repeat) {
+        e.preventDefault();
+        toggleMaskVisibility(false);
+      }
+    });
+    window.addEventListener('keyup', (e) => {
+      if (e.code === 'Space') {
+        toggleMaskVisibility(true);
+      }
+    });
+
+    // Clear Mask Trigger
+    const clearBtn = document.getElementById('btn-clear-selection');
+    const resetMaskBtn = document.getElementById('btn-reset-mask');
+    const executeBtn = document.getElementById('btn-execute-inpaint');
+
+    function handleClear() {
+      if (maskRegion) {
+        maskRegion.style.opacity = maskRegion.style.opacity === '0' ? '1' : '0';
+        maskRegion.style.transition = 'opacity 0.2s ease';
+      }
+    }
+
+    if (clearBtn) clearBtn.addEventListener('click', handleClear);
+    if (resetMaskBtn) resetMaskBtn.addEventListener('click', handleClear);
+
+    // Zoom step controls mock
+    const zoomVal = document.getElementById('zoom-val');
+    const zoomIn = document.getElementById('zoom-in');
+    const zoomOut = document.getElementById('zoom-out');
+    const viewportArt = document.getElementById('viewport-artwork');
+    let currentZoom = 100;
+
+    function applyZoom(delta) {
+      currentZoom = Math.max(50, Math.min(200, currentZoom + delta));
+      if (zoomVal) zoomVal.textContent = currentZoom + '%';
+      if (viewportArt) {
+        viewportArt.style.transform = `scale(${currentZoom / 100})`;
+      }
+    }
+
+    if (zoomIn) zoomIn.addEventListener('click', () => applyZoom(15));
+    if (zoomOut) zoomOut.addEventListener('click', () => applyZoom(-15));
+
+    // Execution simulation
+    if (executeBtn) {
+      executeBtn.addEventListener('click', () => {
+        const originalContent = executeBtn.innerHTML;
+        executeBtn.disabled = true;
+        executeBtn.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 border-2 border-on-primary border-t-transparent rounded-full animate-spin"></span>
+            <span>Synthesizing Canvas...</span>
+          </div>
+          <span class="font-code text-label-sm">480ms</span>
+        `;
+        setTimeout(() => {
+          executeBtn.disabled = false;
+          executeBtn.innerHTML = originalContent;
+          if (maskRegion) {
+            maskRegion.style.opacity = '0';
+          }
+        }, 1200);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xs"><div class="w-full px-gutter flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><span>Ready</span><span>CUDA: Connected</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">Engineered by Abhishek</a><span>© 2025 PixelFix</span></div></div></footer></body></html>

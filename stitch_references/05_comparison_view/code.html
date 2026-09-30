@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#00d298","surface-container-lowest":"#0e0e0f","on-primary-container":"#2b0088","error-container":"#93000a","on-tertiary-fixed":"#3e0022","surface-tint":"#cabeff","primary-fixed-dim":"#cabeff","inverse-surface":"#e5e2e3","on-surface-variant":"#c9c4d8","primary":"#cabeff","on-primary-fixed":"#1c0062","on-background":"#e5e2e3","surface-bright":"#3a393a","surface-container-low":"#1c1b1c","inverse-on-surface":"#313031","on-tertiary":"#640039","secondary-fixed":"#56fdc0","on-secondary-fixed":"#002115","tertiary-container":"#f751a1","on-tertiary-fixed-variant":"#8c0053","on-secondary":"#003826","surface":"#131314","on-surface":"#e5e2e3","outline-variant":"#484555","on-secondary-container":"#00543b","on-error-container":"#ffdad6","outline":"#938ea1","inverse-primary":"#613de0","surface-dim":"#131314","primary-fixed":"#e6deff","surface-container-high":"#2a2a2b","tertiary-fixed":"#ffd9e4","on-error":"#690005","surface-variant":"#353436","tertiary":"#ffb0cd","on-primary":"#32009a","secondary-fixed-dim":"#2ae0a5","secondary":"#42efb2","on-primary-fixed-variant":"#4918c8","background":"#131314","primary-container":"#947dff","surface-container":"#201f20","error":"#ffb4ab","on-secondary-fixed-variant":"#005139","surface-container-highest":"#353436","on-tertiary-container":"#570032","tertiary-fixed-dim":"#ffb0cd"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1rem","space-md":"0.75rem","space-xl":"1.5rem",margin:"1rem","gutter-sm":"0.5rem","margin-lg":"1.5rem",gutter:"1rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["JetBrains Mono"],"label-md":["JetBrains Mono"],"display-lg-mobile":["Geist"],"headline-lg":["Geist"],"body-md":["Geist"],"headline-md":["Geist"],code:["JetBrains Mono"],"display-lg":["Geist"],"body-sm":["Geist"],"headline-lg-mobile":["Geist"],"body-lg":["Geist"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"500"}],code:["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"display-lg":["44px",{lineHeight:"52px",letterSpacing:"-0.035em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-12 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="PixelFix Wordmark Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WBZ7SmwW_uKkaUA-ervNJ0tNtABBrejE34M2C4OnihrLmtgYCiQkY2i4dnzQPdUS1S1cz6Ba7WUzlHobn5y8R0aYY2_OmURDrwa6mk9uyejZEUQddbxoyiUoWoHSh5Wpe8G_FyQcodkOCldvLYojrogSM_QrkJcm4bxH1JWfm65R5a-8BBOszwAC49XMc4A9HSiNUp5nXQjc5BCphHz4nt1nJ2BQmSrivg5_X8pB7BS0L01Ad1Ap9gy78u"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">PixelFix</span><div class="hidden sm:flex items-center gap-space-xs px-space-xs py-[2px] rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>v2.4 · Powered by IOPaint</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface rounded"><a aria-current="page" class="px-space-md py-space-xs font-label-md transition-colors bg-surface-container-high text-on-surface rounded" data-path="studio" href="#">Studio</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="batch" href="#">Batch</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="api" href="#">API</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center px-space-xs py-[2px] rounded bg-surface-container font-code text-code text-on-surface-variant">⌘K</div><button aria-label="Toggle Theme" class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">dark_mode</span></button><a class="hidden sm:inline-flex items-center px-space-sm py-space-xs rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:bg-surface-container transition-colors" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">Made by Abhishek ↗</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-12 flex-1 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<div class="relative w-full flex flex-col xl:flex-row min-h-[calc(100vh-3rem)] bg-surface-container-lowest overflow-hidden select-none">
+<!-- Central Interactive Inpainting Viewport / Studio Stage -->
+<div class="relative flex-1 flex flex-col bg-surface-dim overflow-hidden">
+<!-- Viewport Utility Bar -->
+<div class="h-10 px-space-md bg-surface-container-low/60 backdrop-blur-md flex items-center justify-between z-20">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>INPAINT_ENGINE: LAAMA_V4_FP16</span>
+</div>
+<span class="text-on-surface-variant/40 font-code text-code">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">italy_cafe_shot_042_inpainted.png</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<!-- Pixel Inspection Zoom Controls -->
+<div class="flex items-center bg-surface-container-high p-0.5 rounded">
+<button aria-label="Zoom out" class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors" id="zoomOutBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="px-space-xs font-code text-code text-on-surface min-w-[52px] text-center" id="zoomDisplay">100%</span>
+<button aria-label="Zoom in" class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors" id="zoomInBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors" id="fitScreenBtn" title="Fit to Screen (F)" type="button">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+</button>
+</div>
+<div class="w-px h-4 bg-outline-variant/30 mx-1"></div>
+<!-- Quick Toggle Mode -->
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" id="quickFlipBtn" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">visibility</span>
+<span>Hold for Original (Space)</span>
+</button>
+</div>
+</div>
+<!-- Main Canvas Stage with Draggable Before/After Visualizer -->
+<div class="relative flex-1 w-full h-[620px] xl:h-auto overflow-hidden bg-surface-container-lowest flex items-center justify-center p-space-md" id="canvasViewport">
+<!-- Canvas Stage Background Grid Effect -->
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-container-low/40 via-surface-container-lowest to-surface-container-lowest pointer-events-none"></div>
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#1f1f22_1px,transparent_1px),linear-gradient(to_bottom,#1f1f22_1px,transparent_1px)] bg-[size:32px_32px] opacity-20 pointer-events-none"></div>
+<!-- The Image Comparison Container -->
+<div class="relative max-w-full max-h-[82vh] aspect-[16/9] shadow-2xl rounded overflow-hidden select-none bg-surface-container cursor-ew-resize" id="comparisonContainer">
+<!-- Layer 1: "AFTER" Result (Clean Canvas with Photobomber Inpainted Away) -->
+<img alt="Inpainted result without background photobombers" class="absolute inset-0 w-full h-full object-cover pointer-events-none" data-alt="A sunlit European Mediterranean cobblestone alley in Amalfi Italy outside Cafe Luna. A radiant woman in a denim jacket and floral dress is drinking espresso in the foreground. The noisy background photobomber and seated distraction have been completely and cleanly inpainted away, replaced seamlessly with authentic rustic warm limestone walls, dark cafe bistro woodwork, lush hanging bougainvillea, and sun-dappled vintage cobblestone textures with zero visual artifacts, cinema photo quality." id="imageAfter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbTkZfvhUcsV_6MQKJs6DO6tk9J68LvUpSqQpVa_GDjAa-UAvhRcDWuX1JWmWpOC3-eskGL6hu27LeROyqh59OGozTTzu9kMjGv3p3_T5GIUjbpqcAEB6Nz0zRPRTuUKh9LINvpwZPV0bcDeNqgXnQRyffn1T0rwESv6f1pDwAsy3Ad4kjtComfAQYF9fQG_55kn67K8-_1uUsgF4cCm2GXaxAzwL7gJdbiBxudeYZpIp-KeoGYja7iQ"/>
+<!-- Layer 2: "BEFORE" Original Image (Clipped by Split Line) -->
+<div class="absolute inset-0 w-1/2 overflow-hidden pointer-events-none" id="beforeWrapper">
+<img alt="Original image with photobomber present" class="absolute inset-0 w-full h-full object-cover max-w-none" data-alt="Sunlit cobblestone street in Italy in front of Cafe Luna with a smiling woman in floral dress and denim jacket holding an espresso cup. In the background right, an older woman with silver short hair is seated at an outdoor cafe bistro table with a wine glass, acting as a visible photobomber distraction with tourists in the background." id="imageBefore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUj7rVWZ_GlQqqe1DuDrcfSuYv9_EQO-zYt64XGTJUDAPFofXF5T-4RwaTxRmTrmpkNvlVTWJ-kROGxkTD21yvVCVGvOR4HoK7qCjaZGm2Ur8vSF8Rh7-LYRhtSVzuKCsEdzeZCXi155d9Rf0jC7RoEEtJZJwuH5MGbDG3RJsk220fc0IjhLichT4N377G9xSp0WiBjBvEmAOutDoBlPGgedcNJk8bSw3GZa-MZF_qpIKhPsdw9KL-LA"/>
+<div class="absolute top-4 left-4 z-10 px-space-sm py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>ORIGINAL (BEFORE)</span>
+</div>
+</div>
+<!-- Overlay Label for AFTER -->
+<div class="absolute top-4 right-4 z-10 px-space-sm py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-label-sm text-secondary flex items-center gap-1 shadow-md pointer-events-none">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>CLEANED (AFTER)</span>
+</div>
+<!-- Draggable Split Divider Line & Handle -->
+<div class="absolute top-0 bottom-0 left-1/2 -ml-px w-0.5 bg-primary shadow-[0_0_12px_rgba(202,190,255,0.7)] pointer-events-none z-30" id="splitDivider">
+<div class="absolute top-1/2 -translate-y-1/2 -left-3.5 w-7 h-7 rounded-full bg-surface-container-highest shadow-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+</div>
+</div>
+<!-- Inspection Micro-Loupe Callout -->
+<div class="absolute bottom-4 left-4 z-20 hidden md:flex items-center gap-space-sm px-space-md py-space-xs rounded bg-surface-container-lowest/90 backdrop-blur-md shadow-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">grain</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Texture Matching: 99.8%</span>
+<span class="font-code text-code text-on-surface-variant/80">Poisson Seamless Blending</span>
+</div>
+</div>
+</div>
+<!-- Floating Comparison Mode Pill Overlay -->
+<div class="absolute top-space-lg right-space-lg z-20 flex items-center p-1 rounded-full bg-surface-container-high/90 backdrop-blur-xl shadow-xl">
+<button class="px-space-md py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm" id="sliderModeBtn">
+            Split Slider
+          </button>
+<button class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" id="sideBySideBtn">
+            Full Clean View
+          </button>
+</div>
+<!-- Floating Bottom Success Toast Notification -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 transition-all duration-500 ease-out transform translate-y-0 opacity-100 max-w-[94%] sm:max-w-max" id="successToast">
+<div class="flex items-center gap-space-md px-space-md py-2.5 rounded-full bg-surface-container-high/95 backdrop-blur-2xl shadow-2xl">
+<div class="w-6 h-6 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="font-body-sm text-body-sm font-medium">Object removed cleanly in <span class="font-label-sm text-secondary font-semibold">340ms</span></span>
+<span class="text-on-surface-variant/40 hidden sm:inline">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline">100% artifact free</span>
+</div>
+<div class="flex items-center gap-space-xs pl-space-xs">
+<button class="px-space-xs py-0.5 rounded text-primary hover:text-on-surface hover:bg-surface-container-highest font-label-sm text-label-sm transition-colors" id="undoActionBtn" type="button">
+                Undo
+              </button>
+<button class="w-5 h-5 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors" id="dismissToastBtn" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Canvas Footer Strip -->
+<div class="h-8 px-space-md bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">tune</span>
+<span>Mask ID: #RMV_PERSON_08</span>
+</span>
+<span class="hidden md:inline text-on-surface-variant/40">|</span>
+<span class="hidden md:inline">Bounding Box: [1420, 480, 2048, 1152]</span>
+</div>
+<div class="flex items-center gap-space-sm font-code text-code">
+<span>RGB: 8-bit sRGB</span>
+<span>DPI: 300</span>
+</div>
+</div>
+</div>
+<!-- Inspector & Tool Parameters Rail (Fixed 340px on Desktop) -->
+<aside class="w-full xl:w-[340px] shrink-0 bg-surface-container-low flex flex-col justify-between overflow-y-auto">
+<div class="p-space-lg flex flex-col gap-space-xl">
+<!-- Rail Header Status -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Pass Completed</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Result Ready</h2>
+</div>
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+</div>
+</div>
+<!-- Primary Export & Download Section -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Primary Action</span>
+<!-- Download CTA with format dropdown pill -->
+<div class="flex items-stretch gap-1">
+<a class="flex-1 py-3 px-space-md rounded bg-primary text-on-primary hover:bg-surface-tint font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-primary/20 transition-all active:scale-[0.99]" download="PixelFix_Amalfi_Clean_2048x1152.png" href="placeholder">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Image</span>
+</a>
+<div class="relative group">
+<button aria-label="Export format selection" class="h-full px-space-sm rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center" type="button">
+<span>PNG</span>
+<span class="material-symbols-outlined text-[14px] ml-0.5">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<button class="py-2 px-space-sm rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" id="copyClipboardBtn" type="button">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+<span>Copy Image</span>
+</button>
+<button class="py-2 px-space-sm rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">share</span>
+<span>Share Link</span>
+</button>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<button class="text-primary hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">brush</span>
+<span>Edit Another Object</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              New File (⌘N)
+            </button>
+</div>
+</div>
+<!-- Inpainting Technical Summary Metadata -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Diagnostics & Telemetry</span>
+<span class="font-code text-code text-secondary">CUDA_SYNC_OK</span>
+</div>
+<div class="rounded-xl bg-surface-container divide-y divide-surface-container-high/50 font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-space-md">
+<span class="text-on-surface-variant">Output Resolution</span>
+<span class="font-code text-code text-on-surface">2048 × 1152 px</span>
+</div>
+<div class="flex items-center justify-between p-space-md">
+<span class="text-on-surface-variant">Processing Latency</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-code text-code text-secondary font-semibold">0.34s (340ms)</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-md">
+<span class="text-on-surface-variant">Model Checkpoint</span>
+<span class="font-code text-code text-on-surface">LaMa-Big-L1</span>
+</div>
+<div class="flex items-center justify-between p-space-md">
+<span class="text-on-surface-variant">Encoding Quality</span>
+<span class="font-label-sm text-label-sm text-on-surface px-1.5 py-0.5 rounded bg-surface-container-highest">Lossless PNG</span>
+</div>
+</div>
+</div>
+<!-- Performance / Diff Heatmap Preview -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Delta Inpainting Mask</span>
+<div class="p-space-md rounded-xl bg-surface-container flex items-center gap-space-md">
+<div class="w-16 h-12 rounded bg-surface-container-lowest relative overflow-hidden flex items-center justify-center shrink-0">
+<div class="absolute right-1 bottom-1 w-6 h-8 rounded-full bg-primary/40 blur-[2px]"></div>
+<span class="material-symbols-outlined text-primary text-[20px] relative z-10">draw</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Photobomber Seated Right</span>
+<span class="font-code text-code text-on-surface-variant">214,800 pixels restored</span>
+</div>
+</div>
+</div>
+<!-- Quality Feedback Component -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">How did the AI do?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Help calibrate the model</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Rate positive" class="w-9 h-9 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors" id="rateUpBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+</button>
+<button aria-label="Rate negative" class="w-9 h-9 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-error flex items-center justify-center transition-colors" id="rateDownBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Developer Signature & System Credit Card at bottom of rail -->
+<div class="p-space-lg bg-surface-container-lowest/80 mt-space-md">
+<a class="group block p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Creator Portfolio</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors group-hover:translate-x-0.5">arrow_forward</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-2">
+            Crafted with precision by <span class="text-primary font-medium">Abhishek</span> — see architectural breakdown & vision.
+          </p>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code text-code">
+<span>abhishek-portfolio-pi-lyart.vercel.app</span>
+</div>
+</a>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function initInpaintingComparison() {
+    const container = document.getElementById('comparisonContainer');
+    const beforeWrapper = document.getElementById('beforeWrapper');
+    const imageBefore = document.getElementById('imageBefore');
+    const splitDivider = document.getElementById('splitDivider');
+    const quickFlipBtn = document.getElementById('quickFlipBtn');
+    const sliderModeBtn = document.getElementById('sliderModeBtn');
+    const sideBySideBtn = document.getElementById('sideBySideBtn');
+    const dismissToastBtn = document.getElementById('dismissToastBtn');
+    const successToast = document.getElementById('successToast');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const fitScreenBtn = document.getElementById('fitScreenBtn');
+    const zoomDisplay = document.getElementById('zoomDisplay');
+    const copyClipboardBtn = document.getElementById('copyClipboardBtn');
+    const rateUpBtn = document.getElementById('rateUpBtn');
+    const rateDownBtn = document.getElementById('rateDownBtn');
+
+    if (!container || !beforeWrapper || !splitDivider) return;
+
+    let isDragging = false;
+    let splitPos = 50; // percentage
+    let zoomLevel = 100;
+    let isFullCleanMode = false;
+
+    // Synchronize size of before image to container dimensions
+    function syncImageDimensions() {
+      const rect = container.getBoundingClientRect();
+      if (imageBefore) {
+        imageBefore.style.width = rect.width + 'px';
+        imageBefore.style.height = rect.height + 'px';
+      }
+    }
+
+    window.addEventListener('resize', syncImageDimensions);
+    setTimeout(syncImageDimensions, 50);
+
+    function updateSplit(pct) {
+      pct = Math.max(0, Math.min(100, pct));
+      splitPos = pct;
+      beforeWrapper.style.width = pct + '%';
+      splitDivider.style.left = pct + '%';
+    }
+
+    function handlePointerMove(e) {
+      if (!isDragging) return;
+      const rect = container.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const x = clientX - rect.left;
+      const pct = (x / rect.width) * 100;
+      updateSplit(pct);
+    }
+
+    function startDrag(e) {
+      if (isFullCleanMode) return;
+      isDragging = true;
+      handlePointerMove(e);
+      window.addEventListener('mousemove', handlePointerMove);
+      window.addEventListener('touchmove', handlePointerMove);
+      window.addEventListener('mouseup', stopDrag);
+      window.addEventListener('touchend', stopDrag);
+    }
+
+    function stopDrag() {
+      isDragging = false;
+      window.removeEventListener('mousemove', handlePointerMove);
+      window.removeEventListener('touchmove', handlePointerMove);
+      window.removeEventListener('mouseup', stopDrag);
+      window.removeEventListener('touchend', stopDrag);
+    }
+
+    container.addEventListener('mousedown', startDrag);
+    container.addEventListener('touchstart', startDrag);
+
+    // Zoom Controls Simulation
+    function applyZoom(delta) {
+      zoomLevel = Math.max(50, Math.min(300, zoomLevel + delta));
+      zoomDisplay.textContent = zoomLevel + '%';
+      const scale = zoomLevel / 100;
+      container.style.transform = `scale(${scale})`;
+      container.style.transformOrigin = 'center center';
+      container.style.transition = 'transform 0.15s ease-out';
+    }
+
+    if (zoomInBtn) zoomInBtn.addEventListener('click', () => applyZoom(25));
+    if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => applyZoom(-25));
+    if (fitScreenBtn) fitScreenBtn.addEventListener('click', () => {
+      zoomLevel = 100;
+      zoomDisplay.textContent = '100%';
+      container.style.transform = 'scale(1)';
+    });
+
+    // Spacebar to Hold for Original toggle
+    let spaceDown = false;
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' && !spaceDown && document.activeElement.tagName !== 'INPUT') {
+        e.preventDefault();
+        spaceDown = true;
+        beforeWrapper.style.width = '100%';
+        splitDivider.style.display = 'none';
+      }
+    });
+
+    window.addEventListener('keyup', (e) => {
+      if (e.code === 'Space') {
+        spaceDown = false;
+        beforeWrapper.style.width = splitPos + '%';
+        splitDivider.style.display = 'block';
+      }
+    });
+
+    // Quick Flip button
+    if (quickFlipBtn) {
+      quickFlipBtn.addEventListener('mousedown', () => {
+        beforeWrapper.style.width = '100%';
+        splitDivider.style.display = 'none';
+      });
+      const restoreOriginal = () => {
+        beforeWrapper.style.width = splitPos + '%';
+        splitDivider.style.display = 'block';
+      };
+      quickFlipBtn.addEventListener('mouseup', restoreOriginal);
+      quickFlipBtn.addEventListener('mouseleave', restoreOriginal);
+    }
+
+    // Toggle Modes (Slider vs Full Clean)
+    if (sliderModeBtn && sideBySideBtn) {
+      sliderModeBtn.addEventListener('click', () => {
+        isFullCleanMode = false;
+        sliderModeBtn.className = 'px-space-md py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm';
+        sideBySideBtn.className = 'px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors';
+        beforeWrapper.style.display = 'block';
+        splitDivider.style.display = 'block';
+        updateSplit(50);
+      });
+
+      sideBySideBtn.addEventListener('click', () => {
+        isFullCleanMode = true;
+        sideBySideBtn.className = 'px-space-md py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm';
+        sliderModeBtn.className = 'px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors';
+        beforeWrapper.style.display = 'none';
+        splitDivider.style.display = 'none';
+      });
+    }
+
+    // Toast dismissal
+    if (dismissToastBtn && successToast) {
+      dismissToastBtn.addEventListener('click', () => {
+        successToast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      });
+    }
+
+    // Copy to clipboard mock
+    if (copyClipboardBtn) {
+      copyClipboardBtn.addEventListener('click', () => {
+        const originalContent = copyClipboardBtn.innerHTML;
+        copyClipboardBtn.innerHTML = '<span class="material-symbols-outlined text-[15px] text-secondary">done</span><span>Copied!</span>';
+        setTimeout(() => {
+          copyClipboardBtn.innerHTML = originalContent;
+        }, 2000);
+      });
+    }
+
+    // Rating buttons micro-interactions
+    if (rateUpBtn && rateDownBtn) {
+      rateUpBtn.addEventListener('click', () => {
+        rateUpBtn.classList.toggle('text-secondary');
+        rateDownBtn.classList.remove('text-error');
+      });
+      rateDownBtn.addEventListener('click', () => {
+        rateDownBtn.classList.toggle('text-error');
+        rateUpBtn.classList.remove('text-secondary');
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xs"><div class="w-full px-gutter flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><span>Ready</span><span>CUDA: Connected</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">Engineered by Abhishek</a><span>© 2025 PixelFix</span></div></div></footer></body></html>

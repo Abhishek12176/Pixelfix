@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#00d298","surface-container-lowest":"#0e0e0f","on-primary-container":"#2b0088","error-container":"#93000a","on-tertiary-fixed":"#3e0022","surface-tint":"#cabeff","primary-fixed-dim":"#cabeff","inverse-surface":"#e5e2e3","on-surface-variant":"#c9c4d8","primary":"#cabeff","on-primary-fixed":"#1c0062","on-background":"#e5e2e3","surface-bright":"#3a393a","surface-container-low":"#1c1b1c","inverse-on-surface":"#313031","on-tertiary":"#640039","secondary-fixed":"#56fdc0","on-secondary-fixed":"#002115","tertiary-container":"#f751a1","on-tertiary-fixed-variant":"#8c0053","on-secondary":"#003826","surface":"#131314","on-surface":"#e5e2e3","outline-variant":"#484555","on-secondary-container":"#00543b","on-error-container":"#ffdad6","outline":"#938ea1","inverse-primary":"#613de0","surface-dim":"#131314","primary-fixed":"#e6deff","surface-container-high":"#2a2a2b","tertiary-fixed":"#ffd9e4","on-error":"#690005","surface-variant":"#353436","tertiary":"#ffb0cd","on-primary":"#32009a","secondary-fixed-dim":"#2ae0a5","secondary":"#42efb2","on-primary-fixed-variant":"#4918c8","background":"#131314","primary-container":"#947dff","surface-container":"#201f20","error":"#ffb4ab","on-secondary-fixed-variant":"#005139","surface-container-highest":"#353436","on-tertiary-container":"#570032","tertiary-fixed-dim":"#ffb0cd"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1rem","space-md":"0.75rem","space-xl":"1.5rem",margin:"1rem","gutter-sm":"0.5rem","margin-lg":"1.5rem",gutter:"1rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["JetBrains Mono"],"label-md":["JetBrains Mono"],"display-lg-mobile":["Geist"],"headline-lg":["Geist"],"body-md":["Geist"],"headline-md":["Geist"],code:["JetBrains Mono"],"display-lg":["Geist"],"body-sm":["Geist"],"headline-lg-mobile":["Geist"],"body-lg":["Geist"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"500"}],code:["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"display-lg":["44px",{lineHeight:"52px",letterSpacing:"-0.035em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-12 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="PixelFix Wordmark Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WBZ7SmwW_uKkaUA-ervNJ0tNtABBrejE34M2C4OnihrLmtgYCiQkY2i4dnzQPdUS1S1cz6Ba7WUzlHobn5y8R0aYY2_OmURDrwa6mk9uyejZEUQddbxoyiUoWoHSh5Wpe8G_FyQcodkOCldvLYojrogSM_QrkJcm4bxH1JWfm65R5a-8BBOszwAC49XMc4A9HSiNUp5nXQjc5BCphHz4nt1nJ2BQmSrivg5_X8pB7BS0L01Ad1Ap9gy78u"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">PixelFix</span><div class="hidden sm:flex items-center gap-space-xs px-space-xs py-[2px] rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>v2.4 · Powered by IOPaint</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface rounded"><a aria-current="page" class="px-space-md py-space-xs font-label-md transition-colors bg-surface-container-high text-on-surface rounded" data-path="studio" href="#">Studio</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="batch" href="#">Batch</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="api" href="#">API</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center px-space-xs py-[2px] rounded bg-surface-container font-code text-code text-on-surface-variant">⌘K</div><button aria-label="Toggle Theme" class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">dark_mode</span></button><a class="hidden sm:inline-flex items-center px-space-sm py-space-xs rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:bg-surface-container transition-colors" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">Made by Abhishek ↗</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-12 flex-1 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<div class="w-full flex-1 flex flex-col xl:flex-row bg-surface-container-lowest relative overflow-hidden min-h-[calc(100vh-4rem)]">
+<!-- Top Ribbon Operational Sub-Bar -->
+<div class="absolute top-0 left-0 right-0 z-30 h-10 px-margin flex items-center justify-between bg-surface-container-low/90 backdrop-blur-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="text-on-surface font-code">SESSION_ID #892-A</span>
+<span class="text-outline-variant">/</span>
+<span>amalfi_cafe_walk.raw</span>
+</div>
+<span class="px-space-xs py-[1px] rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase">Inference Active</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">bolt</span>
+<span>FP16 TensorRT</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">memory</span>
+<span>VRAM 4.2 / 16 GB</span>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Inspector</span>
+</button>
+</div>
+</div>
+<!-- Center Infinite Canvas Stage -->
+<div class="flex-1 flex flex-col items-center justify-center pt-10 pb-16 px-gutter relative overflow-hidden select-none bg-surface-container-lowest">
+<!-- Subtle Matrix Coordinate Grid -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#cabeff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<!-- Floating HUD: Synthesis Status Overlay -->
+<div class="absolute top-14 z-40 flex items-center gap-space-md px-space-md py-space-sm rounded-full bg-surface-container/95 shadow-xl backdrop-blur-xl border border-primary/20">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Synthesizing texture</span>
+<span class="text-outline font-label-sm text-label-sm">·</span>
+<span class="font-code text-label-md text-primary font-semibold" id="hud-percentage">65% complete</span>
+<span class="font-code text-label-sm text-on-surface-variant">(180ms remaining)</span>
+</div>
+<div class="w-28 h-1.5 rounded-full bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-primary-container via-primary to-secondary transition-all duration-300 w-[65%]" id="hud-progress-fill"></div>
+</div>
+<button class="px-space-xs py-[2px] rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span>Cancel</span>
+<kbd class="px-1 py-[1px] rounded bg-surface-container-lowest text-[9px] text-outline">ESC</kbd>
+</button>
+</div>
+<!-- Canvas Frame & Mask Synthesizer Layer -->
+<div class="relative max-w-5xl w-full max-h-[75vh] flex items-center justify-center rounded-lg overflow-hidden shadow-2xl bg-surface-container-low group">
+<!-- Base Source Image -->
+<img class="w-full h-auto max-h-[72vh] object-contain block select-none pointer-events-none" data-alt="Sunny historic European cobblestone street with a cheerful young brunette woman in a denim jacket and floral maxi dress walking past a quaint Italian cafe called Cafe Luna with outdoor tables and patrons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVzPgZKNIDx4xs7VeXK7OcD1lXm63dUutcmWV3wvtpUJ9thBx34gbY4cyf4Ei5Lc_Y8ABIPqw78VkJAiN8BeNoQLI6SgYF-rAf4oweGcfp2geuakF9YX4y7qR6FaZYY8wI8wSPqI8fJCZ3Zpm46-lgLffYy0D-GnZznTDraHxklOqXVa1QjqobRPvx6KV5YhmsvrE_dGN3DHik-_Vc0WpIdIUCEL-kFzQy9iZnYDQxpbXKbsb8m_57Mg"/>
+<!-- Liquid Shimmer Neural Diffusion Synthesis Zone -->
+<!-- Placed over the secondary dining patrons area at the bottom-right corner -->
+<div class="absolute right-[3%] bottom-[6%] w-[34%] h-[46%] rounded-xl overflow-hidden pointer-events-none mix-blend-screen shadow-[0_0_50px_rgba(202,190,255,0.4)]">
+<!-- Fluid Inpainting SVG Wave with Neural Gradient Shimmer -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 320">
+<defs>
+<lineargradient id="neuralShimmer" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#cabeff" stop-opacity="0.85">
+<animate attributename="stop-color" dur="4s" repeatcount="indefinite" values="#cabeff;#42efb2;#cabeff"></animate>
+</stop>
+<stop offset="50%" stop-color="#947dff" stop-opacity="0.95">
+<animate attributename="stop-color" dur="4s" repeatcount="indefinite" values="#947dff;#cabeff;#947dff"></animate>
+</stop>
+<stop offset="100%" stop-color="#201f20" stop-opacity="0.3"></stop>
+</lineargradient>
+<filter id="diffuseGlow">
+<fegaussianblur result="coloredBlur" stddeviation="8"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Organic flowing liquid field representing LaMa / FFC neural diffusion -->
+<path fill="url(#neuralShimmer)" filter="url(#diffuseGlow)" opacity="0.85">
+<animate attributename="d" dur="6s" repeatcount="indefinite" values="
+                M 30,50 Q 120,20 220,60 T 380,40 Q 400,160 370,270 T 200,300 Q 80,310 30,240 T 30,50 Z;
+                M 40,65 Q 150,45 200,80 T 390,60 Q 380,180 350,280 T 180,290 Q 60,320 20,220 T 40,65 Z;
+                M 25,45 Q 110,15 240,50 T 375,35 Q 410,170 365,260 T 215,310 Q 95,295 35,250 T 25,45 Z;
+                M 30,50 Q 120,20 220,60 T 380,40 Q 400,160 370,270 T 200,300 Q 80,310 30,240 T 30,50 Z
+              "></animate>
+</path>
+<!-- Secondary High-Frequency Wave Pulse -->
+<path fill="none" opacity="0.75" stroke="#56fdc0" stroke-dasharray="8 6" stroke-width="2.5">
+<animate attributename="d" dur="4s" repeatcount="indefinite" values="
+                M 50,80 C 130,50 180,110 260,80 S 340,110 360,90;
+                M 50,95 C 110,120 200,70 270,100 S 330,70 360,110;
+                M 50,80 C 130,50 180,110 260,80 S 340,110 360,90
+              "></animate>
+<animate attributename="stroke-dashoffset" dur="2s" from="0" repeatcount="indefinite" to="60"></animate>
+</path>
+<!-- Tertiary Micro Scan-line Grid Nodes -->
+<circle cx="90" cy="110" fill="#ffffff" opacity="0.9" r="3">
+<animate attributename="opacity" dur="1.4s" repeatcount="indefinite" values="0.2;1;0.2"></animate>
+</circle>
+<circle cx="210" cy="180" fill="#cabeff" opacity="0.8" r="4">
+<animate attributename="opacity" dur="2.1s" repeatcount="indefinite" values="0.4;1;0.4"></animate>
+</circle>
+<circle cx="310" cy="130" fill="#42efb2" opacity="0.7" r="3.5">
+<animate attributename="opacity" dur="1.7s" repeatcount="indefinite" values="0.1;0.9;0.1"></animate>
+</circle>
+<circle cx="160" cy="240" fill="#ffd9e4" opacity="0.6" r="2.5">
+<animate attributename="opacity" dur="1.9s" repeatcount="indefinite" values="0.3;1;0.3"></animate>
+</circle>
+</svg>
+<!-- Optical Refraction Vignette -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-secondary/15 backdrop-blur-[2px]"></div>
+<!-- Edge Target Crosshairs -->
+<div class="absolute top-2 left-2 flex items-center gap-1 font-label-sm text-[9px] text-primary-fixed uppercase tracking-wider font-code">
+<span class="w-1.5 h-1.5 bg-primary-fixed rounded-full animate-ping"></span>
+<span>MASK_REGION [482, 610, 712, 440]</span>
+</div>
+</div>
+<!-- Floating Coordinates Ticker Bottom-Left of Stage -->
+<div class="absolute bottom-3 left-3 flex items-center gap-space-sm px-space-sm py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-label-sm text-on-surface-variant">
+<span>X: 1142px</span>
+<span class="text-outline-variant">·</span>
+<span>Y: 678px</span>
+<span class="text-outline-variant">·</span>
+<span class="text-secondary font-code">2048 x 1152 Native</span>
+</div>
+<!-- Live View Mode Switcher Bottom-Right of Stage -->
+<div class="absolute bottom-3 right-3 flex items-center p-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md">
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm" type="button">Inpaint Pass</button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Original</button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Diff Mask</button>
+</div>
+</div>
+<!-- Floating Bottom Dock: Toolset & Neural Step Gauge -->
+<div class="absolute bottom-4 z-30 flex items-center gap-space-md px-space-lg py-space-sm rounded-xl bg-surface-container-low/90 shadow-2xl backdrop-blur-md">
+<!-- Canvas Tool Icons (Locked / Inactive Indicator During Generation) -->
+<div class="flex items-center gap-space-xs opacity-40 cursor-not-allowed">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container" disabled="">
+<span class="material-symbols-outlined text-[18px]">brush</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container" disabled="">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container" disabled="">
+<span class="material-symbols-outlined text-[18px]">gesture</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container" disabled="">
+<span class="material-symbols-outlined text-[18px]">crop</span>
+</button>
+</div>
+<div class="h-5 w-[1px] bg-surface-container-high"></div>
+<!-- Step Indicator Telemetry -->
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Model:</span>
+<span class="font-code text-on-surface font-medium">IOPaint LAMA / FFC Diffusion</span>
+<span class="text-outline-variant">·</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container text-primary font-code">Step 18/25</span>
+</div>
+<div class="h-5 w-[1px] bg-surface-container-high"></div>
+<!-- Zoom & View State -->
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-code text-on-surface px-1">100%</span>
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-on-surface ml-1" title="Fit to Canvas">
+<span class="material-symbols-outlined text-[14px]">fit_screen</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Controls Panel (320px Fixed Docked Cockpit) -->
+<aside class="w-full xl:w-80 flex flex-col justify-between bg-surface-container-low px-space-md py-space-md z-30 shrink-0">
+<div class="flex flex-col gap-space-lg">
+<!-- Inspector Top Header & Pipeline Badge -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">magic_button</span>
+<span class="font-headline-md text-headline-md text-on-surface">Inpaint Engine</span>
+</div>
+<span class="px-space-xs py-[2px] rounded bg-secondary/10 text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            ACTIVE
+          </span>
+</div>
+<!-- Primary Action Trigger: Sleek Loading Shimmer State -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full relative overflow-hidden py-3 px-space-md rounded-lg font-headline-md text-headline-md text-on-primary bg-primary cursor-wait shadow-lg shadow-primary/20 flex items-center justify-center gap-space-xs" disabled="">
+<!-- Pulsing ambient glow shimmer gradient -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
+<span class="tracking-normal font-medium">Synthesizing pixels...</span>
+</button>
+<div class="flex justify-between items-center px-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>Pass 1 of 1</span>
+<span class="text-primary font-code">Est. 0.4s</span>
+</div>
+</div>
+<!-- Dimmed & Disabled Brush Tool Parameters -->
+<div class="flex flex-col gap-space-md p-space-md rounded-lg bg-surface-container opacity-50 relative pointer-events-none select-none">
+<!-- Lock Pill overlay on disabled params -->
+<div class="absolute top-2 right-2 flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px]">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+<span>LOCKED</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-space-xs">
+<span>Brush & Mask Calibration</span>
+</div>
+<!-- Brush Size Control Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Radius</span>
+<span class="font-code text-on-surface">45 px</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-container-highest relative overflow-hidden">
+<div class="w-[45%] h-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Feathering Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Feather Edge</span>
+<span class="font-code text-on-surface">12 px</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-container-highest relative overflow-hidden">
+<div class="w-[28%] h-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Infill Model Selection -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Diffusion Model</span>
+<div class="w-full py-1.5 px-space-sm rounded bg-surface-container-lowest font-code text-label-sm text-on-surface flex justify-between items-center">
+<span>LaMa (Large-Mask) v2</span>
+<span class="material-symbols-outlined text-[16px] text-outline">unfold_more</span>
+</div>
+</div>
+<!-- Denoise Threshold Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Denoising Strength</span>
+<span class="font-code text-on-surface">0.92</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-container-highest relative overflow-hidden">
+<div class="w-[92%] h-full bg-primary-container"></div>
+</div>
+</div>
+</div>
+<!-- Real-Time Hardware Inference Telemetry Card -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Inference Telemetry</span>
+<span class="font-code text-label-sm text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              24.2 FPS
+            </span>
+</div>
+<!-- Data Grid -->
+<div class="grid grid-cols-2 gap-space-xs font-label-sm text-label-sm pt-1">
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="text-on-surface-variant">Latency</span>
+<span class="font-code text-on-surface font-medium text-label-md">280ms</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="text-on-surface-variant">Resolution</span>
+<span class="font-code text-on-surface font-medium text-label-md">2048x1152</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="text-on-surface-variant">Model Memory</span>
+<span class="font-code text-on-surface font-medium text-label-md">420 MB</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="text-on-surface-variant">Tensors</span>
+<span class="font-code text-on-surface font-medium text-label-md">FP16 CUDA</span>
+</div>
+</div>
+<!-- Mini Sparkline Activity Visualization -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex justify-between items-center text-[10px] text-outline font-code">
+<span>GPU UTILIZATION</span>
+<span>88% PEAK</span>
+</div>
+<div class="h-6 w-full flex items-end gap-[3px]">
+<div class="flex-1 bg-surface-container-high h-[30%] rounded-xs"></div>
+<div class="flex-1 bg-surface-container-high h-[45%] rounded-xs"></div>
+<div class="flex-1 bg-surface-container-high h-[40%] rounded-xs"></div>
+<div class="flex-1 bg-surface-container-high h-[60%] rounded-xs"></div>
+<div class="flex-1 bg-primary/70 h-[82%] rounded-xs"></div>
+<div class="flex-1 bg-primary h-[94%] rounded-xs"></div>
+<div class="flex-1 bg-primary h-[88%] rounded-xs animate-pulse"></div>
+<div class="flex-1 bg-secondary h-[91%] rounded-xs animate-pulse"></div>
+<div class="flex-1 bg-surface-container-high h-[20%] rounded-xs"></div>
+<div class="flex-1 bg-surface-container-high h-[15%] rounded-xs"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Portfolio & Author Recognition Card at Cockpit Base -->
+<div class="pt-space-md flex flex-col gap-space-xs">
+<a class="group flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all duration-200" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center text-on-primary-container font-headline-md font-bold text-label-md shrink-0">
+              A
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors truncate">Abhishek Singh</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">Full Stack & Creative Dev</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-transform group-hover:translate-x-0.5">open_in_new</span>
+</a>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Dynamic Progress Counter Simulation for Processing State
+  (function () {
+    let currentProgress = 65;
+    const progressText = document.getElementById('hud-percentage');
+    const progressBar = document.getElementById('hud-progress-fill');
+
+    if (progressText && progressBar) {
+      const interval = setInterval(() => {
+        if (currentProgress < 98) {
+          currentProgress += Math.floor(Math.random() * 2) + 1;
+          if (currentProgress > 98) currentProgress = 98;
+          progressText.innerText = `${currentProgress}% complete`;
+          progressBar.style.width = `${currentProgress}%`;
+        } else {
+          clearInterval(interval);
+        }
+      }, 120);
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xs"><div class="w-full px-gutter flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><span>Ready</span><span>CUDA: Connected</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="https://abhishek-portfolio-pi-lyart.vercel.app/" rel="noopener noreferrer" target="_blank">Engineered by Abhishek</a><span>© 2025 PixelFix</span></div></div></footer></body></html>

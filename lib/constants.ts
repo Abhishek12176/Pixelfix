@@ -1,0 +1,41 @@
+export const APP_CONFIG = {
+  name: 'PixelFix',
+  version: '2.4',
+  author: 'Abhishek',
+  portfolioUrl: 'https://abhishek-portfolio-pi-lyart.vercel.app/',
+  model: {
+    name: 'lama_512_int8.onnx',
+    localUrl: '/models/lama_512_int8.onnx',
+    cdnUrl: 'https://huggingface.co/g-ronimo/lama/resolve/main/lama_512_int8.onnx',
+    sizeBytes: 62074990,
+    sizeMB: 62.1,
+    dimension: 512,
+  },
+  brush: {
+    minSize: 4,
+    maxSize: 120,
+    defaultSize: 36,
+    maskFillColor: 'rgba(202, 190, 255, 0.5)',
+    maskStrokeColor: 'rgba(124, 92, 252, 0.85)',
+    accentViolet: '#7C5CFC',
+    accentMint: '#42efb2',
+  },
+  samples: [
+    {
+      id: 'cafe',
+      name: 'european_cafe_patrons.jpg',
+      title: 'European Street & Cafe',
+      subtitle: 'Remove the seated background photobomber',
+      url: '/samples/cafe_street.jpg',
+      thumb: '/samples/cafe_street.jpg',
+    },
+    {
+      id: 'beach',
+      name: 'coastal_horizon.jpg',
+      title: 'Coastal Walk',
+      subtitle: 'Remove background tourists and watercraft',
+      url: '/samples/coastal_beach.jpg',
+      thumb: '/samples/coastal_beach.jpg',
+    },
+  ],
+};
