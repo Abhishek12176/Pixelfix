@@ -1,15 +1,26 @@
-import * as ort from 'onnxruntime-web';
+import type { InferenceSession, Tensor } from 'onnxruntime-web';
 import { ModelProgress } from '@/types';
 import { APP_CONFIG } from '@/lib/constants';
 
-// Configure WASM paths safely to official CDN matching onnxruntime-web
-ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.0/dist/';
-ort.env.wasm.numThreads = 1;
-ort.env.wasm.simd = true;
-ort.env.wasm.proxy = false;
-
-let activeSession: ort.InferenceSession | null = null;
+type OrtType = typeof import('onnxruntime-web');
+let ortModule: OrtType | null = null;
+let activeSession: InferenceSession | null = null;
 let isInitializing = false;
+
+/**
+ * Lazily loads ONNX Runtime via dynamic import ONLY when inference is executed.
+ * This ensures onnxruntime-web is NOT parsed or compiled on worker startup.
+ */
+async function getOrt(): Promise<OrtType> {
+  if (ortModule) return ortModule;
+  const ort = await import('onnxruntime-web');
+  ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.0/dist/';
+  ort.env.wasm.numThreads = 1;
+  ort.env.wasm.simd = true;
+  ort.env.wasm.proxy = false;
+  ortModule = ort;
+  return ortModule;
+}
 
 /**
  * Downloads model with streaming progress reporting and CacheStorage caching in the worker.
@@ -141,7 +152,7 @@ async function fetchModelBufferWithProgress(
  */
 async function getInpaintingSession(
   onProgress?: (progress: ModelProgress) => void
-): Promise<ort.InferenceSession> {
+): Promise<InferenceSession> {
   if (activeSession) return activeSession;
 
   if (isInitializing) {
@@ -153,6 +164,7 @@ async function getInpaintingSession(
 
   isInitializing = true;
   try {
+    const ort = await getOrt();
     const modelBuffer = await fetchModelBufferWithProgress(onProgress);
 
     onProgress?.({
@@ -191,6 +203,7 @@ async function executeInpainting(
   onProgress: (progress: ModelProgress) => void
 ): Promise<{ outputPixels: Uint8ClampedArray; elapsedMs: number }> {
   const startTime = performance.now();
+  const ort = await getOrt();
   const session = await getInpaintingSession(onProgress);
 
   onProgress({
@@ -202,7 +215,7 @@ async function executeInpainting(
   const dim = 512;
   const numPixels = dim * dim;
   const inputNames = session.inputNames;
-  const feeds: Record<string, ort.Tensor> = {};
+  const feeds: Record<string, Tensor> = {};
 
   if (inputNames.length === 1) {
     // 4-channel unified input: [1, 4, 512, 512]

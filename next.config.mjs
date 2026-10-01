@@ -3,6 +3,9 @@ import path from 'path';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.externals = [...(config.externals || []), 'onnxruntime-web'];

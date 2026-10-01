@@ -23,7 +23,6 @@ export const Hero: React.FC = () => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       const url = URL.createObjectURL(file);
-      // Store in sessionStorage so editor can pick it up immediately
       sessionStorage.setItem('pixelfix_pending_image', url);
       sessionStorage.setItem('pixelfix_pending_filename', file.name);
       router.push('/editor');
@@ -42,8 +41,8 @@ export const Hero: React.FC = () => {
       <header className="sticky top-0 left-0 right-0 z-50 bg-[#0A0A0B]/80 backdrop-blur-xl border-b border-white/5">
         <div className="max-w-6xl mx-auto h-14 px-6 flex items-center justify-between">
           {/* Left: PixelFix Brand Wordmark */}
-          <Link href="/" className="flex items-center gap-2.5 group" aria-label="PixelFix Home">
-            <div className="w-8 h-8 rounded-lg bg-[#141416] border border-white/10 flex items-center justify-center text-primary group-hover:scale-105 transition-all shadow-sm">
+          <Link href="/" prefetch={false} className="flex items-center gap-2.5 group py-2" aria-label="PixelFix Home">
+            <div className="w-8 h-8 rounded-lg bg-[#141416] border border-white/10 flex items-center justify-center text-[#A78BFA] group-hover:scale-105 transition-all shadow-sm">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M7 17L14 10M14 10L17 13M14 10L12 8M17 13L15 15" strokeLinecap="round" strokeLinejoin="round" />
                 <circle cx="8" cy="8" r="1" fill="currentColor" />
@@ -51,9 +50,9 @@ export const Hero: React.FC = () => {
               </svg>
             </div>
             <span className="font-semibold text-base tracking-tight text-white">
-              Pixel<span className="text-primary">Fix</span>
+              Pixel<span className="text-[#A78BFA]">Fix</span>
             </span>
-            <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/5 text-[11px] font-mono text-zinc-300">
+            <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/5 text-[11px] font-mono text-[#D4D4D8]">
               <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" aria-hidden="true" />
               <span>v2.4 · LaMa Engine</span>
             </div>
@@ -65,7 +64,7 @@ export const Hero: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Made by Abhishek (opens portfolio in new tab)"
-            className="flex items-center gap-1 text-xs font-medium text-zinc-300 hover:text-white transition-colors py-1.5 px-3 rounded-lg hover:bg-white/5 group"
+            className="min-h-[44px] flex items-center gap-1 text-xs font-medium text-[#D4D4D8] hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5 group focus:outline-none focus:ring-1 focus:ring-[#A78BFA]"
           >
             <span>Made by {APP_CONFIG.author}</span>
             <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
@@ -88,19 +87,19 @@ export const Hero: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
               </span>
-              <span className="text-xs font-mono text-zinc-300 font-medium tracking-tight">
-                New: In-Browser LaMa AI <span className="text-zinc-500">·</span> Sub-second inference
+              <span className="text-xs font-mono text-[#D4D4D8] font-medium tracking-tight">
+                New: In-Browser LaMa AI <span className="text-[#A1A1A6]">·</span> Sub-second inference
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white max-w-3xl leading-[1.12] mb-6">
               Remove anything.<br />
-              <span className="text-zinc-400">Perfect every shot.</span>
+              <span className="text-[#A1A1A6]">Perfect every shot.</span>
             </h1>
 
             {/* Subtext */}
-            <p className="text-base sm:text-lg text-zinc-300 max-w-xl mx-auto leading-relaxed mb-10 text-balance">
+            <p className="text-base sm:text-lg text-[#D4D4D8] max-w-xl mx-auto leading-relaxed mb-10 text-balance">
               Upload a photo, brush over what you don't want, and let AI handle the rest. Free forever.
               Nothing leaves your device.
             </p>
@@ -122,7 +121,7 @@ export const Hero: React.FC = () => {
                 type="button"
                 aria-label="Upload photo from your computer"
                 onClick={() => fileInputRef.current?.click()}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-medium text-sm flex items-center justify-center gap-2.5 shadow-[0_0_32px_rgba(124,92,252,0.4)] transition-all active:scale-[0.98] group cursor-pointer"
+                className="w-full sm:w-auto min-h-[48px] px-8 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-medium text-sm flex items-center justify-center gap-2.5 shadow-[0_0_32px_rgba(124,92,252,0.4)] transition-all active:scale-[0.98] group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#A78BFA]"
               >
                 <UploadCloud className="w-4 h-4" aria-hidden="true" />
                 <span>Upload Photo</span>
@@ -131,24 +130,25 @@ export const Hero: React.FC = () => {
 
               <Link
                 href="/editor"
+                prefetch={false}
                 aria-label="Open PixelFix Studio directly"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#1C1C1F] hover:bg-[#252529] text-white font-medium text-sm flex items-center justify-center gap-2 border border-white/10 transition-all shadow-sm"
+                className="w-full sm:w-auto min-h-[48px] px-6 py-3.5 rounded-xl bg-[#1C1C1F] hover:bg-[#252529] text-white font-medium text-sm flex items-center justify-center gap-2 border border-white/10 transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-[#A78BFA]"
               >
-                <Sparkles className="w-4 h-4 text-primary" aria-hidden="true" />
+                <Sparkles className="w-4 h-4 text-[#A78BFA]" aria-hidden="true" />
                 <span>Open Studio</span>
               </Link>
             </div>
 
-            {/* Sample image quick-test buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-xs text-zinc-300">
-              <span>Or try with:</span>
+            {/* Sample image quick-test buttons with touch targets */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-xs text-[#D4D4D8]">
+              <span className="py-2">Or try with:</span>
               {APP_CONFIG.samples.map((s) => (
                 <button
                   key={s.id}
                   onClick={() => handleSampleClick(s.url, s.name)}
                   type="button"
                   aria-label={`Try sample photo: ${s.title}`}
-                  className="px-2.5 py-1 rounded-md bg-white/5 hover:bg-white/10 text-white transition-colors border border-white/5 font-mono text-[11px]"
+                  className="min-h-[44px] px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white transition-colors border border-white/10 font-mono text-xs flex items-center focus:outline-none focus:ring-1 focus:ring-[#A78BFA]"
                 >
                   {s.title}
                 </button>
@@ -156,20 +156,20 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Trust Row */}
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-zinc-300 text-xs font-mono">
-              <div className="flex items-center gap-1.5">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[#D4D4D8] text-xs font-mono">
+              <div className="flex items-center gap-1.5 py-1">
                 <CheckCircle2 className="w-3.5 h-3.5 text-secondary" aria-hidden="true" />
                 <span>No signup</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 py-1">
                 <CheckCircle2 className="w-3.5 h-3.5 text-secondary" aria-hidden="true" />
                 <span>Runs in your browser</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 py-1">
                 <CheckCircle2 className="w-3.5 h-3.5 text-secondary" aria-hidden="true" />
                 <span>Your photos stay private</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 py-1">
                 <CheckCircle2 className="w-3.5 h-3.5 text-secondary" aria-hidden="true" />
                 <span>Free forever</span>
               </div>
@@ -180,7 +180,7 @@ export const Hero: React.FC = () => {
           <div className="w-full max-w-5xl mx-auto px-6 pb-20">
             <div className="relative w-full rounded-2xl bg-[#141416] border border-white/10 shadow-[0_24px_64px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col group">
               {/* Studio Window Bar */}
-              <div className="h-10 bg-[#1C1C1F] px-4 flex items-center justify-between border-b border-white/5 text-xs text-zinc-400 select-none">
+              <div className="h-10 bg-[#1C1C1F] px-4 flex items-center justify-between border-b border-white/5 text-xs text-[#A1A1A6] select-none">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1.5" aria-hidden="true">
                     <span className="w-2.5 h-2.5 rounded-full bg-white/15" />
@@ -202,16 +202,20 @@ export const Hero: React.FC = () => {
                 type="button"
                 aria-label="Try sample photo in Studio: European Cafe Street"
                 onClick={() => handleSampleClick('/samples/cafe_street.jpg', 'cafe_street.jpg')}
-                className="relative w-full h-80 sm:h-96 md:h-[460px] overflow-hidden bg-black flex items-center justify-center cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-primary"
+                className="relative w-full h-80 sm:h-96 md:h-[460px] overflow-hidden bg-black flex items-center justify-center cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-[#A78BFA]"
               >
                 <img
                   src="/samples/cafe_street.jpg"
                   alt="PixelFix Studio Inpainting Demonstration with cafe patrons"
+                  loading="lazy"
+                  decoding="async"
+                  width={1024}
+                  height={683}
                   className="w-full h-full object-cover opacity-90"
                 />
 
                 {/* Simulated mask overlay on photobomber */}
-                <div className="absolute right-[12%] bottom-[14%] w-36 h-48 rounded-2xl border-2 border-dashed border-primary bg-primary/30 backdrop-blur-[2px] flex items-center justify-center shadow-[0_0_32px_rgba(124,92,252,0.5)]" aria-hidden="true">
+                <div className="absolute right-[12%] bottom-[14%] w-36 h-48 rounded-2xl border-2 border-dashed border-[#A78BFA] bg-primary/30 backdrop-blur-[2px] flex items-center justify-center shadow-[0_0_32px_rgba(124,92,252,0.5)]" aria-hidden="true">
                   <span className="px-2 py-1 rounded bg-black/75 text-[10px] font-mono text-white">
                     Masked Object
                   </span>
@@ -219,7 +223,7 @@ export const Hero: React.FC = () => {
 
                 {/* Floating Click to Try CTA on hover */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm" aria-hidden="true">
-                  <span className="px-5 py-2.5 rounded-xl bg-primary text-white font-medium text-xs flex items-center gap-2 shadow-2xl pointer-events-none">
+                  <span className="min-h-[44px] px-5 py-2.5 rounded-xl bg-primary text-white font-medium text-xs flex items-center gap-2 shadow-2xl pointer-events-none">
                     <Sparkles className="w-4 h-4" />
                     <span>Click to Edit This in Studio</span>
                   </span>
@@ -234,11 +238,11 @@ export const Hero: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1 */}
             <div className="p-6 rounded-2xl bg-[#141416] border border-white/5 flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-1">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-[#A78BFA] mb-1">
                 <Zap className="w-5 h-5" aria-hidden="true" />
               </div>
               <h2 className="text-base font-semibold text-white tracking-tight">Brush. Remove. Done.</h2>
-              <p className="text-xs text-zinc-300 leading-relaxed">
+              <p className="text-xs text-[#D4D4D8] leading-relaxed">
                 Highlight people in the background, power lines, text, or watermarks. Click remove and watch them disappear instantly with seamless texture filling.
               </p>
             </div>
@@ -249,18 +253,18 @@ export const Hero: React.FC = () => {
                 <ShieldCheck className="w-5 h-5" aria-hidden="true" />
               </div>
               <h2 className="text-base font-semibold text-white tracking-tight">Runs Locally</h2>
-              <p className="text-xs text-zinc-300 leading-relaxed">
+              <p className="text-xs text-[#D4D4D8] leading-relaxed">
                 AI runs directly in your browser using ONNX WebAssembly. No image is ever uploaded to a remote server, guaranteeing 100% private data.
               </p>
             </div>
 
             {/* Card 3 */}
             <div className="p-6 rounded-2xl bg-[#141416] border border-white/5 flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-1">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-[#A78BFA] mb-1">
                 <Heart className="w-5 h-5" aria-hidden="true" />
               </div>
               <h2 className="text-base font-semibold text-white tracking-tight">Built with Passion</h2>
-              <p className="text-xs text-zinc-300 leading-relaxed">
+              <p className="text-xs text-[#D4D4D8] leading-relaxed">
                 Engineered by Abhishek with cutting-edge web AI technology. Check out more projects on Abhishek's portfolio.
               </p>
               <a
@@ -268,7 +272,7 @@ export const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="See Abhishek's portfolio (opens in new tab)"
-                className="text-xs text-primary hover:underline mt-auto inline-flex items-center gap-1 font-medium pt-2"
+                className="min-h-[44px] text-xs text-[#A78BFA] hover:text-[#C4B5FD] hover:underline mt-auto inline-flex items-center gap-1 font-medium pt-2 focus:outline-none focus:ring-1 focus:ring-[#A78BFA]"
               >
                 <span>See the portfolio</span>
                 <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
@@ -279,7 +283,7 @@ export const Hero: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t border-white/5 py-8 px-6 text-center text-xs font-mono text-zinc-400">
+      <footer className="w-full border-t border-white/5 py-8 px-6 text-center text-xs font-mono text-[#A1A1A6]">
         <p>Built with onnxruntime-web + LaMa · Hosted on Vercel · Made by {APP_CONFIG.author}</p>
       </footer>
     </div>

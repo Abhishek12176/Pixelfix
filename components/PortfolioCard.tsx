@@ -25,7 +25,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ className = '' }) 
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit Abhishek's portfolio (opens in new tab)"
-          className="px-2.5 py-1 rounded-md text-primary hover:bg-primary/10 text-xs font-medium whitespace-nowrap transition-colors flex items-center gap-0.5 group focus:outline-none focus:ring-1 focus:ring-primary"
+          className="min-h-[44px] px-3 py-2 rounded-md text-[#A78BFA] hover:text-white hover:bg-white/5 text-xs font-medium whitespace-nowrap transition-colors flex items-center gap-0.5 group focus:outline-none focus:ring-1 focus:ring-[#A78BFA]"
         >
           <span>Portfolio</span>
           <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />

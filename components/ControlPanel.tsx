@@ -59,7 +59,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
               type="button"
               aria-label="Select brush tool (Press B)"
               onClick={() => setToolMode('brush')}
-              className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-medium transition-all focus:outline-none focus:ring-1 focus:ring-primary ${
+              className={`min-h-[44px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-medium transition-all focus:outline-none focus:ring-1 focus:ring-primary ${
                 toolMode === 'brush'
                   ? 'bg-primary text-white shadow-md'
                   : 'text-zinc-300 hover:text-white hover:bg-white/5'
@@ -73,7 +73,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
               type="button"
               aria-label="Select eraser tool (Press E)"
               onClick={() => setToolMode('eraser')}
-              className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-medium transition-all focus:outline-none focus:ring-1 focus:ring-primary ${
+              className={`min-h-[44px] flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-medium transition-all focus:outline-none focus:ring-1 focus:ring-primary ${
                 toolMode === 'eraser'
                   ? 'bg-primary text-white shadow-md'
                   : 'text-zinc-300 hover:text-white hover:bg-white/5'
@@ -119,6 +119,9 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
               </div>
             </div>
 
+            <label htmlFor="brush-radius-slider" className="sr-only">
+              Brush size slider
+            </label>
             <input
               id="brush-radius-slider"
               type="range"
@@ -162,7 +165,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
               aria-label="Clear current mask"
               onClick={onClearMask}
               disabled={!hasMask || isProcessing}
-              className={`flex-1 py-2 px-3 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-1.5 border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary ${
+              className={`flex-1 min-h-[44px] py-2.5 px-3 rounded-lg text-xs font-medium transition-colors flex items-center justify-center gap-1.5 border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary ${
                 hasMask && !isProcessing
                   ? 'bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-white'
                   : 'bg-white/5 text-zinc-600 cursor-not-allowed'
@@ -179,7 +182,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
               type="button"
               aria-label="Download cleaned image as PNG"
               onClick={onDownload}
-              className="w-full py-3 px-4 rounded-xl bg-surface-container-high hover:bg-white/15 text-white font-medium text-xs flex items-center justify-center gap-2 border border-white/10 transition-all shadow-md active:scale-98 animate-in fade-in focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full min-h-[44px] py-3 px-4 rounded-xl bg-surface-container-high hover:bg-white/15 text-white font-medium text-xs flex items-center justify-center gap-2 border border-white/10 transition-all shadow-md active:scale-98 animate-in fade-in focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <Download className="w-4 h-4 text-secondary" aria-hidden="true" />
               <span>Download Cleaned Image</span>
@@ -192,7 +195,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
               type="button"
               aria-label="Open a new photo"
               onClick={onNewImage}
-              className="text-xs text-zinc-300 hover:text-primary transition-colors flex items-center gap-1.5 focus:outline-none focus:underline"
+              className="min-h-[44px] px-3 text-xs text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5 focus:outline-none focus:underline"
             >
               <Upload className="w-3.5 h-3.5" aria-hidden="true" />
               <span>Open New Photo</span>
@@ -204,7 +207,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         {hasMask && (
           <div className="p-3 rounded-xl bg-surface-container/60 border border-white/5 flex items-center justify-between text-xs">
             <span className="text-zinc-400">Selection Area:</span>
-            <span className="font-mono text-primary font-medium">
+            <span className="font-mono text-[#A78BFA] font-medium">
               {activeMaskPixels > 0 ? `${activeMaskPixels.toLocaleString()} px` : 'Active'}
             </span>
           </div>
