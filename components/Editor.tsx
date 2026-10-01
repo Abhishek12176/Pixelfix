@@ -29,6 +29,21 @@ export const Editor: React.FC<EditorProps> = ({ initialImageSrc }) => {
   const [imageMetadata, setImageMetadata] = useState<ImageMetadata | null>(null);
   const [engineMode, setEngineMode] = useState<string>(getActiveEngine());
   const maskCanvasRef = useRef<HTMLCanvasElement>(null);
+  const workerRef = useRef<Worker | null>(null);
+
+  const getWorker = useCallback(() => {
+    if (!workerRef.current && typeof window !== 'undefined') {
+      workerRef.current = new Worker(new URL('../lib/inpainter.worker.ts', import.meta.url));
+    }
+    return workerRef.current || undefined;
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      workerRef.current?.terminate();
+      workerRef.current = null;
+    };
+  }, []);
 
   // Tools & Brush state
   const [toolMode, setToolMode] = useState<ToolMode>('brush');
@@ -257,12 +272,14 @@ export const Editor: React.FC<EditorProps> = ({ initialImageSrc }) => {
       saveSnapshot();
       const maskCanvas = maskCanvasRef.current;
 
+      const worker = getWorker();
       const resultCanvas = await runInpainting(
         currentImageCanvas,
         maskCanvas,
         (progress) => {
           setModelProgress(progress);
-        }
+        },
+        worker
       );
 
       // Update engine mode indicator

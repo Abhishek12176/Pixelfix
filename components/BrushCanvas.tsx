@@ -220,25 +220,27 @@ export const BrushCanvas: React.FC<BrushCanvasProps> = ({
           />
         )}
 
-        <div className="flex items-center bg-[#1C1C1F]/90 backdrop-blur-md border border-white/10 p-0.5 rounded-full shadow-lg">
+        <div className="flex items-center bg-[#1C1C1F]/90 backdrop-blur-md border border-white/10 p-0.5 rounded-full shadow-lg" role="group" aria-label="Zoom controls">
           <button
             type="button"
             onClick={() => setZoomLevel((z) => Math.max(0.5, z - 0.25))}
-            className="w-7 h-7 flex items-center justify-center rounded-full text-on-surface hover:text-white hover:bg-white/10 transition-colors"
+            className="w-7 h-7 flex items-center justify-center rounded-full text-zinc-300 hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-1 focus:ring-primary"
             title="Zoom Out"
+            aria-label="Zoom Out"
           >
-            <ZoomOut className="w-3.5 h-3.5" />
+            <ZoomOut className="w-3.5 h-3.5" aria-hidden="true" />
           </button>
-          <span className="font-mono text-[11px] text-on-surface px-1 min-w-[42px] text-center">
+          <span className="font-mono text-[11px] text-zinc-300 px-1 min-w-[42px] text-center" aria-live="polite">
             {Math.round(zoomLevel * 100)}%
           </span>
           <button
             type="button"
             onClick={() => setZoomLevel((z) => Math.min(3, z + 0.25))}
-            className="w-7 h-7 flex items-center justify-center rounded-full text-on-surface hover:text-white hover:bg-white/10 transition-colors"
+            className="w-7 h-7 flex items-center justify-center rounded-full text-zinc-300 hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-1 focus:ring-primary"
             title="Zoom In"
+            aria-label="Zoom In"
           >
-            <ZoomIn className="w-3.5 h-3.5" />
+            <ZoomIn className="w-3.5 h-3.5" aria-hidden="true" />
           </button>
           <button
             type="button"
@@ -246,10 +248,11 @@ export const BrushCanvas: React.FC<BrushCanvasProps> = ({
               setZoomLevel(1);
               setPanOffset({ x: 0, y: 0 });
             }}
-            className="w-7 h-7 flex items-center justify-center rounded-full text-on-surface-variant hover:text-white hover:bg-white/10 transition-colors ml-0.5"
+            className="w-7 h-7 flex items-center justify-center rounded-full text-zinc-400 hover:text-white hover:bg-white/10 transition-colors ml-0.5 focus:outline-none focus:ring-1 focus:ring-primary"
             title="Reset Zoom (Fit)"
+            aria-label="Reset Zoom (Fit)"
           >
-            <Maximize2 className="w-3 h-3" />
+            <Maximize2 className="w-3 h-3" aria-hidden="true" />
           </button>
         </div>
       </div>
@@ -266,12 +269,16 @@ export const BrushCanvas: React.FC<BrushCanvasProps> = ({
         {/* Layer 1: Base Image Canvas */}
         <canvas
           ref={displayCanvasRef}
+          role="img"
+          aria-label="Base photo canvas"
           className="block max-h-[76vh] max-w-full w-auto h-auto object-contain pointer-events-none select-none rounded-xl"
         />
 
         {/* Layer 2: Mask Canvas (User brushes here - vibrant blue overlay) */}
         <canvas
           ref={maskCanvasRef}
+          role="img"
+          aria-label="Brush mask drawing canvas"
           onPointerDown={handlePointerDown}
           className={`absolute inset-0 w-full h-full object-contain pointer-events-auto select-none rounded-xl touch-none ${
             isHoldingOriginal ? 'opacity-0' : 'opacity-90'

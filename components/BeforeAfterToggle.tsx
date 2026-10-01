@@ -55,23 +55,24 @@ export const BeforeAfterToggle: React.FC<BeforeAfterToggleProps> = ({
       onMouseLeave={() => setIsHolding(false)}
       onTouchStart={() => setIsHolding(true)}
       onTouchEnd={() => setIsHolding(false)}
-      className={`select-none flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all shadow-md active:scale-95 ${
+      className={`select-none flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary ${
         isHolding
           ? 'bg-primary text-white ring-2 ring-primary/40'
-          : 'bg-[#1C1C1F]/90 hover:bg-[#252529] text-on-surface hover:text-white border border-white/10'
+          : 'bg-[#1C1C1F]/90 hover:bg-[#252529] text-zinc-200 hover:text-white border border-white/10'
       }`}
       title="Hold to see original image (or hold Spacebar)"
+      aria-label="Hold to see original photo (or hold Spacebar)"
     >
       {isHolding ? (
         <>
-          <EyeOff className="w-3.5 h-3.5 text-white" />
+          <EyeOff className="w-3.5 h-3.5 text-white" aria-hidden="true" />
           <span>Showing Original</span>
         </>
       ) : (
         <>
-          <Eye className="w-3.5 h-3.5 text-secondary" />
+          <Eye className="w-3.5 h-3.5 text-secondary" aria-hidden="true" />
           <span>Hold for Original</span>
-          <span className="hidden sm:inline-block font-mono text-[10px] px-1 py-0.5 rounded bg-black/40 text-outline ml-1">
+          <span className="hidden sm:inline-block font-mono text-[10px] px-1 py-0.5 rounded bg-black/40 text-zinc-400 ml-1" aria-hidden="true">
             Space
           </span>
         </>
